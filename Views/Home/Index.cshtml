@@ -1,0 +1,29 @@
+﻿@model List<Dictionary<string, object>>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h1 class="display-4 d-inline text-success">Lost In The Woods</h1>
+    <p class="d-inline">List of local hiking trails</p>
+</div>
+<table class="table table-hover">
+    <thead>
+        <th>Trail Name</th>
+        <th>Trail Length</th>
+        <th>Elevation Change</th>
+    </thead>
+    @foreach(var trail in Model)
+    {
+    <tbody>
+        <td> <a href='trails/@trail["id"]'>@trail["id"] @trail["name"]</a></td>
+        <td>@trail["length"]</td>
+        <td>@trail["elevation"]</td>
+    </tbody>
+    }
+
+</table>
+<a href="NewTrail">
+    <button class="btn btn-outline-success btn-sm">Add a new trail</button>
+</a>

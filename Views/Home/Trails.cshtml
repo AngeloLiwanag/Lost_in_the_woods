@@ -1,0 +1,18 @@
+@model List<Dictionary<string, object>>
+<div class="text-left">
+    @foreach(var trail in Model)
+    {
+    <h1 class="display-4 d-inline text-success">@trail["name"]</h1>
+    <h3>Description</h3>
+    <p>@trail["description"]</p>
+    <h3>Trail Length</h3>
+    <p>@trail["length"]</p>
+    <h3>Elevation Change</h3>
+    <p>@trail["elevation"]</p>
+    <h3>Longitude</h3>
+    <p>@trail["longitude"]</p>    
+    <h3>Latitude</h3>
+    <p>@trail["latitude"]</p>
+    }
+
+</div>

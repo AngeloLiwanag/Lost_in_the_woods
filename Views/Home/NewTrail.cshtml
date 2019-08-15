@@ -1,0 +1,61 @@
+@model Trail
+<div class="text-left">
+    <h1 class="display-4 text-success d-inline">Add A New Trail</h1>
+    <form asp-action="AddTrail" asp-controller="Home" method="POST" class="m-5">
+        <table>
+            <tbody>
+                <!-- Trail Name -->
+                <span asp-validation-for="name" class="text-danger"></span>
+                <td>
+                    <label asp-for="name">Trail Name: </label>
+                </td>
+                <td>
+                    <input asp-for="name" type="text">
+                </td>
+            </tbody>
+            <tbody>
+                <!-- Description -->
+                <span asp-validation-for="description" class="text-danger"></span>
+                <td>
+                    <label asp-for="description">Description: </label>
+                </td>
+                <td>
+                    <input asp-for="description" type="text">
+                </td>
+            </tbody>
+            <tbody>
+                <!-- Trail Length -->
+                <span asp-validation-for="length" class="text-danger"></span>
+                <td>
+                    <label asp-for="length">Trail Length: </label>
+                </td>
+                <td>
+                    <input asp-for="length" type="text">
+                </td>
+            </tbody>
+            <tbody>
+                <!-- Elevation Change -->
+                <span asp-validation-for="elevation" class="text-danger"></span>
+                <td>
+                    <label asp-for="elevation">Elevation Change: </label>
+                </td>
+                <td>
+                    <input asp-for="elevation" type="text">
+                </td>
+            </tbody>
+            <tbody>
+                <!-- Longitude & Latitude -->
+                <span asp-validation-for="longitude" class="text-danger"></span>
+                <span asp-validation-for="latitude" class="text-danger"></span>
+                <td>
+                    <label>Longitude & Latitude: </label>
+                </td>
+                <td>
+                    <input asp-for="longitude" type="text">
+                    <input asp-for="latitude" type="text">
+                </td>
+            </tbody>
+        </table>
+        <button class="btn btn-primary btn-sm" type="submit">Create Record!</button>
+    </form>
+</div>
